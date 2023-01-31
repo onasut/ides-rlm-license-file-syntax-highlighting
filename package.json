@@ -1,8 +1,8 @@
 {
-    "name": "rlm-license-file",
-    "displayName": "rlm license file",
-    "description": "Syntax highlight for RLM license file",
-    "version": "0.0.1",
+    "name": "ides-rlm-license-file",
+    "displayName": "ides rlm license file",
+    "description": "Syntax highlighting for Ides RLM license file",
+    "version": "0.0.2",
     "publisher": "onasut",
     "engines": {
         "vscode": "^1.24.0"
@@ -12,19 +12,19 @@
     ],
     "contributes": {
         "languages": [{
-            "id": "rlm-lic",
-            "aliases": ["RLM License File", "rlm-lic"],
+            "id": "ides-rlm-lic",
+            "aliases": ["Ides RLM License File", "rlm-lic"],
             "extensions": [".lic"],
             "configuration": "./language-configuration.json"
         }],
         "grammars": [{
-            "language": "rlm-lic",
+            "language": "ides-rlm-lic",
             "scopeName": "source.rlm",
-            "path": "./syntaxes/rlm-lic.tmLanguage.json"
+            "path": "./syntaxes/ides-rlm-lic.tmLanguage.json"
         }]
     },
     "repository": {
         "type": "git",
-        "url": ""
+        "url": "https://github.com/onasut/ides-rlm-license-file-syntax-highlighting"
     }
 }
