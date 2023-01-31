@@ -1,0 +1,65 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "RLM License File",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#comment"
+		},
+		{
+			"include": "#parameters"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.rlm-lic",
+				"match": "\\b(HOST|ISV|LICENSE|PORT)\\b"
+			}]
+		},
+		"comment": {
+			"patterns": [{
+				"name": "comment.line.number-sign.rlm-lic",
+				"match": "\\s*((#).*)$"
+			}]
+		},
+		"parameters": {
+			"patterns": [{
+				"name": "variable.parameter.rlm-lic",
+				"match": "\\b(share|_ck|sig|options|leaseTime|idesglobal|elmaster_enterprise|rlm_server_enable_vm)\\b"
+			}]
+		},
+		"constants": {
+			"patterns": [{
+				"name": "constant.language.exp_date",
+				"match": "\\b(permanent|\\d{1,2}-\\w{3}-\\d{4})\\b"
+			}, {
+				"name": "constant.numeric.feat_version",
+				"match": "\\b\\d+\\.\\d+\\b"
+			}, {
+				"name": "constant.numeric.count",
+				"match": "\\b(uncounted|\\d+)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.rlm-lic",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.rlm-lic",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.rlm"
+}

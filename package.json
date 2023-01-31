@@ -1,0 +1,30 @@
+{
+    "name": "rlm-license-file",
+    "displayName": "rlm license file",
+    "description": "Syntax highlight for RLM license file",
+    "version": "0.0.1",
+    "publisher": "onasut",
+    "engines": {
+        "vscode": "^1.24.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "rlm-lic",
+            "aliases": ["RLM License File", "rlm-lic"],
+            "extensions": [".lic"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "rlm-lic",
+            "scopeName": "source.rlm",
+            "path": "./syntaxes/rlm-lic.tmLanguage.json"
+        }]
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    }
+}
