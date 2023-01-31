@@ -1,15 +1,15 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "RLM License File",
+	"name": "Ides RLM License File",
 	"patterns": [
 		{
-			"include": "#keywords"
+			"include": "#rlmkeywords"
 		},
 		{
 			"include": "#comment"
 		},
 		{
-			"include": "#parameters"
+			"include": "#ideskeywords"
 		},
 		{
 			"include": "#constants"
@@ -19,10 +19,10 @@
 		}
 	],
 	"repository": {
-		"keywords": {
+		"rlmkeywords": {
 			"patterns": [{
 				"name": "keyword.control.rlm-lic",
-				"match": "\\b(HOST|ISV|LICENSE|PORT)\\b"
+				"match": "\\b(HOST|ISV|LICENSE|port|sig|_ck|options|leaseTime|share|rlm_server_enable_vm)\\b"
 			}]
 		},
 		"comment": {
@@ -31,10 +31,10 @@
 				"match": "\\s*((#).*)$"
 			}]
 		},
-		"parameters": {
+		"ideskeywords": {
 			"patterns": [{
 				"name": "variable.parameter.rlm-lic",
-				"match": "\\b(share|_ck|sig|options|leaseTime|idesglobal|elmaster_enterprise|rlm_server_enable_vm)\\b"
+				"match": "\\b(idesglobal|elmaster_enterprise|elmaster_design)\\b"
 			}]
 		},
 		"constants": {
