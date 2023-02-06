@@ -6,10 +6,13 @@
 			"include": "#rlmkeywords"
 		},
 		{
+			"include": "#ideskeywords"
+		},
+		{
 			"include": "#comment"
 		},
 		{
-			"include": "#ideskeywords"
+			"include": "#parameters"
 		},
 		{
 			"include": "#constants"
@@ -25,16 +28,22 @@
 				"match": "\\b(HOST|ISV|LICENSE|port|sig|_ck|options|leaseTime|share|rlm_server_enable_vm)\\b"
 			}]
 		},
+		"ideskeywords": {
+			"patterns": [{
+				"name": "keyword.control.ides-lic",
+				"match": "\\b(idesglobal|elmaster_enterprise|elmaster_design)\\b"
+			}]
+		},
 		"comment": {
 			"patterns": [{
 				"name": "comment.line.number-sign.rlm-lic",
 				"match": "\\s*((#).*)$"
 			}]
 		},
-		"ideskeywords": {
+		"parameters": {
 			"patterns": [{
 				"name": "variable.parameter.rlm-lic",
-				"match": "\\b(idesglobal|elmaster_enterprise|elmaster_design)\\b"
+				"match": "\\b()\\b"
 			}]
 		},
 		"constants": {
